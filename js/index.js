@@ -8,6 +8,16 @@ modalButtons.forEach(function(button) {
     });
 });
 
+var modalButtons = document.querySelectorAll('.programm-button');
+
+modalButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+        var modalId = button.dataset.modal; 
+        var modal = document.querySelector(modalId); 
+        modal.classList.add('active'); 
+    });
+});
+
 var modals = document.querySelectorAll('.modal');
 
 modals.forEach(function(modal) {
